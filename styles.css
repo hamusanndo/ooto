@@ -1,0 +1,156 @@
+body {
+  font-size: 14px;
+  background-color: antiquewhite;
+}
+
+.container {
+  margin: 30px auto;
+  width: 500px;
+
+}
+h3 {
+  margin: 0 0 116px 0;
+  text-align: center;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li a {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  padding: 8px 0;
+  color: #0b0a0a;
+  text-decoration: none;
+  border-radius: 8px 8px 0 0;
+}
+
+.menu li a.active {
+  background: #02fa2cf9;
+  color: #f81414;
+}
+
+.menu li a:not(.active):hover {
+  opacity: 0.2;
+  transition: opacity 0.5s;
+}
+
+.content.active {
+  background: #3c3cf314;
+  color: #f80606;
+  min-height: 150px;
+  padding: 12px;
+  display: block;
+  border-radius: 0 0 8px 8px;
+
+}
+
+section {
+  font-size: 24px;
+}
+
+.content {
+  display: none;
+}
+
+div {
+  padding: 0 160px;
+}
+
+h1 {
+  font-size: 32px;
+  border-bottom: 1px solid;
+  padding: 8px 16px;
+  margin: 48px 0;
+  text-align: center;
+  display: block;
+}
+
+img {
+  margin: auto;
+  display: block;
+  padding-bottom: 32px;
+}
+
+h2 {
+  padding: 0 160px;
+}
+
+dl {
+  margin: 0;
+ }
+
+dl>div {
+  margin: 0;
+}
+
+dt {
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  
+}
+
+dt::before {
+  content: 'Q.';
+}
+
+dt::after {
+  content: '+';
+  position: absolute;
+  top: 8px;
+  right: 16px;
+
+}
+
+dl>div.appear dt::after {
+  transform: rotate(45deg);
+}
+
+dd {
+  background-color: rgba(202, 41, 41, 0.561);
+  font-style: italic;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 0;
+  display: none;
+}
+
+
+dd::berore {
+
+  content: 'A.';
+}
+
+dl>div.appear dd {
+  display: block;
+  animation: 12s fadeIn;
+}
+
+footer {
+  text-align: center;
+  margin: 16px 0;
+  padding: 16px;
+  background-color: antiquewhite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+
+}
